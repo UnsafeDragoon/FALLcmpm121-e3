@@ -5,7 +5,7 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute("aria-label", "A neutral face with a moustache");
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +58,24 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+for (let i = 0; i < 100; i++) {
+  const piece = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "line",
+  );
+  piece.setAttribute("x1", `${50 + (i * 1)}`);
+  piece.setAttribute("y1", "118");
+  piece.setAttribute("x2", `${20 + (i * 2)}`);
+  piece.setAttribute("y2", "129");
+  piece.setAttribute("stroke-width", "3");
+  if (i % 2 === 0) {
+    piece.setAttribute("stroke", "#542705");
+  } else {
+    piece.setAttribute("stroke", "#a35111");
+  }
+  face.append(piece);
+}
 
 portrait.append(face);
 
