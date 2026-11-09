@@ -19,3 +19,7 @@ Implementation explored on branch B, seperate from main. Final product fits the 
 Branch C will utilize gradients and Bézier curves to display black-gray frosted sunglasses on the face.
 
 Implementation explored on branch C. seperate from main. Originally planned to make an array of working pieces for the glasses, but ended up simply using two strokes and their derived area for the lens appearance.
+
+## Choice
+
+Ended up choosing branch B to commit to the main branch, as it was the implementation I prefered the most. It also isn't entirely too complex nor messy.
